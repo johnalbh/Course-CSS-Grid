@@ -22,6 +22,14 @@
             background: blue;
             border: 1px solid #fafafa;
         }
+        
+        .item:nth-of-type(4) {
+            background: red;
+            overflow: auto;
+            /* Aun no esta disponible */
+            display: grid;
+            grid-template: 300px 300px / 33.3% 33.3% 33.33%;
+        }
     </style>
 </head>
 
@@ -30,7 +38,13 @@
         <div class="item">contenido #1</div>
         <div class="item">contenido #2</div>
         <div class="item">contenido #3</div>
-        <div class="item">contenido #4</div>
+        <div class="item">
+            <div class="item">subitem #1</div>
+            <div class="item">subitem #2</div>
+            <div class="item">subitem #3</div>
+            <div class="item">subitem #4</div>
+            <div class="item">subitem #5</div>
+        </div>
         <div class="item">contenido #5</div>
         <div class="item">contenido #6</div>
     </section>
