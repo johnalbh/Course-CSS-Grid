@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CSS Grid</title>
+    <title>Holy Grail</title>
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -15,8 +15,12 @@
             display: grid;
             /* grid-template-columns: 33.3% 33.3% 33.33%;
             grid-template-rows: 300px 300px; */
-            grid-template: repeat(2, 1fr) / repeat(3, minmax(200px, 1fr));
-            grid-gap: 5px 5px;
+            grid-template: 100px 1fr 50px / 200px 1fr;
+            grid-gap: 10px;
+            height: 100vh;
+            grid-template-areas: "header header"
+                                 "left contenido"
+                                 "footer footer"    
         }
         
         .item {
@@ -28,30 +32,30 @@
             background: red;
             overflow: auto;
             /* Aun no esta disponible */
-            display: inline-grid;
+            display: grid;
+            grid-template: 50px 50px 50px / 200px 200px 200px;
+        }
+        .header {
+            grid-area: header;
+        }
+        .left{
+            grid-area: left;
+        }
+        .contenido{
+            grid-area: contenido;
+        }
+        .footer{
+            grid-area: footer
         }
     </style>
 </head>
 
 <body>
-    <section>
-        <ul>
-            <li><a href="HolyGrail.html">HolyGrail</a></li>
-        </ul>
-    </section>
     <section class="container">
-        <div class="item">contenido 1</div>
-        <div class="item">contenido #2</div>
-        <div class="item">contenido #3</div>
-        <div class="item">
-            <div class="item">subitem #1</div>
-            <div class="item">subitem #2</div>
-            <div class="item">subitem #3 - 1</div>
-            <div class="item">subitem #4</div>
-            <div class="item">subitem #5</div>
-        </div>
-        <div class="item">contenido #5</div>
-        <div class="item">contenido #6</div>
+        <div class="item header">header</div>
+        <div class="item left">left</div>
+        <div class="item contenido">contenido</div>
+        <div class="item footer">footer</div>
     </section>
 </body>
 
